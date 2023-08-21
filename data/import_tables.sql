@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS "question" (
   "id" serial PRIMARY KEY,
   "titre" text NOT NULL,
   "description" text NULL,
+  "lien_image" text NULL,
   "utilisateur_id" integer NOT NULL REFERENCES "utilisateur" ("id"),
   "created_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   "updated_at" timestamptz
