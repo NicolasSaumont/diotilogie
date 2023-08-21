@@ -1,4 +1,4 @@
-utilisateur(id, prénom, nom, email, mot de passe)
+utilisateur(id, prenom, nom, email, mot de passe)
 question(id, titre, description, #utilisateur(id))
 categorie(id, nom)
 
