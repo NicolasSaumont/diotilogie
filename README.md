@@ -126,12 +126,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Feuille de route
 
 - [ ] Création des datas
-- [ ] User-stories
-- [ ] MCD
-- [ ] Création des BDD
-- [ ] Integration
-- [ ] Voir la liste des questions
-- [ ] Voir la liste des questions par catégorie
+- [x] User-stories
+- [x] MCD
+- [x] Création des BDD
+- [x] Integration
+- [x] Voir la liste des questions
+- [x] Voir la liste des catégories
+- [x] Voir la liste des questions par catégorie
 - [ ] Voir le détail des questions
 - [ ] Identification d'un utilisateur
 - [ ] Inscription d'un utilisateur
