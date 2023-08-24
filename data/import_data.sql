@@ -4,14 +4,14 @@ BEGIN;
 -- Déchargement des données de la table "utilisateur"
 --
 
-INSERT INTO "utilisateur" ("id", "email", "password", "prenom", "nom") VALUES
+INSERT INTO "user" ("id", "email", "password", "firstname", "lastname") VALUES
 (1, 'admin@diotilogie.com', 'admin', 'Admin', 'Istrateur');
 
 --
 -- Déchargement des données de la table "question"
 --
 
-INSERT INTO "question" ("id", "titre", "description", "lien_image", "utilisateur_id") VALUES
+INSERT INTO "question" ("id", "title", "description", "link_image", "user_id") VALUES
 (1, 'Pourquoi on ne voit les étoiles que la nuit ?', 'Imagine que l''univers est un gigantesque spectacle de lumière. Les étoiles sont les vedettes de ce spectacle, et la Terre est le spectateur chanceux qui a une place au premier rang. Mais voici la chose amusante : même si les étoiles brillent jour et nuit, nous ne les voyons que lorsque le soleil se repose et que la nuit tombe. Pourquoi ? Eh bien, c''est un peu comme si les étoiles jouaient à cache-cache avec la lumière du soleil !
 
 Imagine-toi dans une pièce avec une grande fenêtre. Lorsque le soleil brille dehors, il illumine la pièce et rend difficile de voir les petites lumières, comme les ampoules d''une guirlande scintillante que tu pourrais allumer à l''intérieur. C''est à peu près ce qui se passe avec les étoiles. Le soleil est notre étoile locale, et il brille si fort qu''il noie presque toutes les autres lumières dans le ciel pendant la journée.
@@ -162,10 +162,10 @@ Alors, pourquoi joue-t-on à ce jeu de changement d''heure ? C''est un peu comme
 En résumé, on change d''heure pour ajuster nos journées à la lumière du soleil. Le pays des fuseaux horaires joue avec les aiguilles des horloges pour faire des journées plus longues en été et des soirées plus tôt en hiver. C''est un peu comme un spectacle magique pour donner à chaque saison sa propre touche spéciale. Alors, la prochaine fois que tu changeras l''heure de tes horloges, rappelle-toi que c''est le pays des fuseaux horaires qui organise ce tour de manège temporel pour rendre nos journées encore plus éclatantes !', '/img/change-time.jpg', 1);
 
 --
--- Déchargement des données de la table "categorie"
+-- Déchargement des données de la table "tag"
 --
 
-INSERT INTO "categorie" ("id", "nom") VALUES
+INSERT INTO "tag" ("id", "name") VALUES
 (1, 'Anatomie'),
 (2, 'Astronomie'),
 (3, 'Biologie'),
@@ -181,10 +181,10 @@ INSERT INTO "categorie" ("id", "nom") VALUES
 (13, 'Sociologie');
 
 --
--- Déchargement des données de la table "question_has_categorie"
+-- Déchargement des données de la table "question_has_tag"
 --
 
-INSERT INTO "question_has_categorie" ("question_id", "categorie_id") VALUES
+INSERT INTO "question_has_tag" ("question_id", "tag_id") VALUES
 (1, 2),
 (2, 11),
 (3, 8),
@@ -197,8 +197,3 @@ INSERT INTO "question_has_categorie" ("question_id", "categorie_id") VALUES
 (10, 13);
 
 COMMIT;
-
--- SELECT setval('question_id_seq', (SELECT MAX(id) from "question"));
--- SELECT setval('categorie_id_seq', (SELECT MAX(id) from "categorie"));
-
--- COMMIT;
