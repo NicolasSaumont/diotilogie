@@ -109,102 +109,104 @@ a {
 }
 
 .card_tag--anatomie {
-    background-color: #fff461;
+    background-color: #D36135;
+    color: #fff;
 }
 .card_tag--anatomie:hover {
-    background-color: #ece144;
+    background-color: #B54C23;
 }
 
 .card_tag--astronomie {
-    background-color: #a0ff61;
+    background-color: #7FB069;
+    color: #fff;
 }
 .card_tag--astronomie:hover {
-    background-color: #89e74b;
+    background-color: #6A9D52;
 }
 
 .card_tag--biologie {
-    background-color: #61ff96;
+    background-color: #ECE4B7;
 }
 .card_tag--biologie:hover {
-    background-color: #4ae47e;
+    background-color: #D5CC9C;
 }
 
 .card_tag--chimie {
-    background-color: #61ffff;
+    background-color: #E6AA68;
 }
 .card_tag--chimie:hover {
-    background-color: #42e9e9;
+    background-color: #D69651;
 }
 
 .card_tag--cinema {
-    background-color: #61b3ff;
+    background-color: #02020B;
+    color: #fff;
 }
 .card_tag--cinema:hover {
-    background-color: #4398e7;
+    background-color: #272525;
 }
 
 .card_tag--geek {
-    background-color: #6186ff;
+    background-color: #778472;
+    color: #fff;
 }
 .card_tag--geek:hover {
-    background-color: #456ae4;
-    color: #fff;
+    background-color: #5C6C56;
 }
 
 .card_tag--geologie {
-    background-color: #6b61ff;
+    background-color: #4C1A57;
     color: #fff;
 }
 .card_tag--geologie:hover {
-    background-color: #554aec;
+    background-color: #371040;
 }
 
 .card_tag--histoire {
-    background-color: #9e61ff;
+    background-color: #FF3CC7;
+    color: #fff;
 }
 .card_tag--histoire:hover {
-    background-color: #8345e7;
-    color: #fff;
+    background-color: #E42AAF;
 }
 
 .card_tag--physique {
-    background-color: #d261ff;
+    background-color: #F0F600;
 }
 .card_tag--physique:hover {
-    background-color: #b846e6;
-    color: #fff;
+    background-color: #D6DA04;
 }
 
 .card_tag--physiquequantique {
-    background-color: #ff61dd;
+    background-color: #00E5E8;
 }
 .card_tag--physiquequantique:hover {
-    background-color: #e440c0;
+    background-color: #02BABD;
     color: #fff;
 }
 
 .card_tag--psychologie {
-    background-color: #ff61a3;
+    background-color: #007C77;
+    color: #fff;
 }
 .card_tag--psychologie:hover {
-    background-color: #ec438a;
-    color: #fff;
+    background-color: #01625F;
 }
 
 .card_tag--religion {
-    background-color: #ff6183;
+    background-color: #BF0603;
+    color: #fff;
 }
 .card_tag--religion:hover {
-    background-color: #eb4367;
-    color: #fff;
+    background-color: #A00502;
 }
 
 .card_tag--sociologie {
-    background-color: #ff6161;
+    background-color: #018E42;
+    color: #fff;
 }
 .card_tag--sociologie:hover {
-    background-color: #f04646;
-    color: #fff;
+    background-color: #026A33;
 }
 
 .card_title {
