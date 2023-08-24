@@ -30,4 +30,6 @@ Tag.belongsToMany(Question, {
     foreignKey: 'tag_id',
     otherKey: 'question_id',
     as: 'questionsFromTags'
-})
+});
+
+module.exports = { User, Question, Tag };

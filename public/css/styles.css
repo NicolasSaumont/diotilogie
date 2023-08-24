@@ -70,10 +70,11 @@ a {
 .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card {
-    max-width: 350px;
+    max-width: 300px;
     border: 1px solid #ddd;
     margin: 1em;
     padding: 10px;
@@ -82,39 +83,145 @@ a {
 }
 
 .card_header {
-    background-color: #f9e07f;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+}
+
+.card_img {
+    width: 100%;
+    height: 11em;
+    border-radius: 0.5em;
+}
+
+.card_link--tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
 .card_tag {
     border-radius: 0.4em;
     padding: 0.2em 0.5em;
-    color: #ddd;
+    color: #333;
+    margin-bottom: 1em;
+    transition: background-color 0.3s ease;
 }
 
-.card_tag--categorie {
-    background-color: #ff6f61;
+.card_tag--anatomie {
+    background-color: #fff461;
+}
+.card_tag--anatomie:hover {
+    background-color: #ece144;
 }
 
-.card_tag--categorie:hover {
-    background-color: #ff5a4d;
+.card_tag--astronomie {
+    background-color: #a0ff61;
+}
+.card_tag--astronomie:hover {
+    background-color: #89e74b;
+}
+
+.card_tag--biologie {
+    background-color: #61ff96;
+}
+.card_tag--biologie:hover {
+    background-color: #4ae47e;
+}
+
+.card_tag--chimie {
+    background-color: #61ffff;
+}
+.card_tag--chimie:hover {
+    background-color: #42e9e9;
+}
+
+.card_tag--cinema {
+    background-color: #61b3ff;
+}
+.card_tag--cinema:hover {
+    background-color: #4398e7;
+}
+
+.card_tag--geek {
+    background-color: #6186ff;
+}
+.card_tag--geek:hover {
+    background-color: #456ae4;
+    color: #fff;
+}
+
+.card_tag--geologie {
+    background-color: #6b61ff;
+    color: #fff;
+}
+.card_tag--geologie:hover {
+    background-color: #554aec;
+}
+
+.card_tag--histoire {
+    background-color: #9e61ff;
+}
+.card_tag--histoire:hover {
+    background-color: #8345e7;
+    color: #fff;
+}
+
+.card_tag--physique {
+    background-color: #d261ff;
+}
+.card_tag--physique:hover {
+    background-color: #b846e6;
+    color: #fff;
+}
+
+.card_tag--physiquequantique {
+    background-color: #ff61dd;
+}
+.card_tag--physiquequantique:hover {
+    background-color: #e440c0;
+    color: #fff;
+}
+
+.card_tag--psychologie {
+    background-color: #ff61a3;
+}
+.card_tag--psychologie:hover {
+    background-color: #ec438a;
+    color: #fff;
+}
+
+.card_tag--religion {
+    background-color: #ff6183;
+}
+.card_tag--religion:hover {
+    background-color: #eb4367;
+    color: #fff;
+}
+
+.card_tag--sociologie {
+    background-color: #ff6161;
+}
+.card_tag--sociologie:hover {
+    background-color: #f04646;
+    color: #fff;
 }
 
 .card_title {
-    font-size: 1.5rem;
+    background-color: #f9e07f;
+    font-size: 1.2rem;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-align: center;
 }
 
 .card_body {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.card_description {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.card_link {
+.card_link--question {
     display: inline-block;
     background-color: #ff6f61;
     color: #fff;
@@ -122,9 +229,11 @@ a {
     border-radius: 3px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    align-self: center;
+    margin: 1em 0;
 }
 
-.card_link:hover {
+.card_link--question:hover {
     background-color: #ff5a4d;
 }
 

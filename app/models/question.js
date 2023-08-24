@@ -12,7 +12,7 @@ Question.init({
     type: DataTypes.STRING,
     allowNull: true,
   },
-  link_image: {
+  image: {
     type: DataTypes.STRING,
     allowNull: true,
   }

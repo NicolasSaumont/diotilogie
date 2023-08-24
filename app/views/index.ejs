@@ -1,98 +1,34 @@
 <%- include('./partials/header.ejs') %>
 
 <h2 class="page-title">Bienvenue sur Diotilogie</h2>
+
 <p class="site-description">Que ce soit pour comprendre les mystères de la science, les curiosités de la nature ou les subtilités de la vie moderne, notre plateforme propose des réponses claires et accessibles. Nourrissez votre curiosité en explorant des explications détaillées sur une variété de sujets. Plus besoin de laisser vos questions en suspend, trouvez des réponses éclairantes en un instant. Simplifiez votre recherche de connaissances avec notre site dédié au "Pourquoi" et élargissez votre compréhension du monde qui vous entoure.</p>
+
 <div class="cards">
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
 
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
+    <% questions.forEach(question => { %>
+        <card class="card">
+            <div class="card_header">
+                <img class="card_img" src="/img/<%= question.image %>.jpg" alt="picture showing <%= question.image %>">
 
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
+                <% question.tagsFromQuestion.forEach(tag => { %>
+                    <a class="btn card_link card_link--tag" href="/<%= tag.name.toLowerCase() %>">
+                        <div class="card_tag card_tag--<%= tag.name.toLowerCase() %>"><%= tag.name %></div>
+                    </a>
+                <% }) %>
+                    
+                <h3 class="card_title"><%= question.title %></h3>
+               
+            </div>
+            <div class="card_body">
+                <a class="btn card_link card_link--question" href="/<%= question.id %>">
+                    Voir la réponse
+                </a>
+                <p class="card_author">Une question posée par <%= question.userOfQuestion.firstname %> <%= question.userOfQuestion.lastname %></p>
+            </div>
+        </card>
+    <% }) %>
 
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
-
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
-
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
-
-    <card class="card">
-        <div class="card_header">
-            <a href="/tags"><div class="card_tag card_tag--categorie">Catégorie</div></a>
-            <h3 class="card_title">Title</h3>
-        </div>
-        <div class="card_body">
-            <h4 class="card_description">Description</h4>
-            <a class="btn card_link" href="/detail">
-                En savoir plus
-            </a>
-        </div>
-    </card>
 </div>
         
 <%- include('./partials/footer.ejs') %>
