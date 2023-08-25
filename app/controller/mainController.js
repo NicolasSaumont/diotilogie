@@ -1,4 +1,5 @@
 const { Question } = require('../models');
+const { User } = require('../models');
 
 const mainController = {
 
@@ -20,7 +21,64 @@ const mainController = {
             res.status(500).send({ message: error.message });
         };
 
+    },
+
+    async loginPage (req, res) {
+
+        try {
+
+            if(!res.locals.user){
+
+                res.render('login.ejs');
+
+            } else {
+
+                res.redirect('/');
+
+            }
+        
+        } catch (error) {
+            console.trace(error);
+            res.status(500).send({ message: error.message });
+        };
+
+    },
+
+    async postLogin (req, res) {
+
+        try {
+
+            const userEmail = req.body.email;
+            const userPassword = req.body.password;
+
+            const user = await User.findOne({
+                where: {
+                    'email': userEmail,
+                    'password': userPassword
+                }
+            });
+
+            if(user){
+
+                req.session.user = user.dataValues.email;
+                req.session.firstname = user.dataValues.firstname;
+                req.session.lastname = user.dataValues.lastname;
+                res.redirect('/');
+
+            } else {
+
+                res.redirect('/login');
+
+            }
+        
+        } catch (error) {
+            console.trace(error);
+            res.status(500).send({ message: error.message });
+        };
+
     }
+    
+
 };
 
 module.exports = mainController;

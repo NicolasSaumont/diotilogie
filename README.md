@@ -146,7 +146,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Voir la liste des catégories
 - [x] Voir la liste des questions par catégorie
 - [x] Voir le détail des questions
-- [ ] Identification d'un utilisateur
+- [x] Identification d'un utilisateur
 - [ ] Inscription d'un utilisateur
 - [ ] Connexion d'un utilisateur
 - [ ] Afficher la page de profil d'un utilisateur

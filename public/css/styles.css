@@ -76,7 +76,7 @@ a {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .card {
@@ -273,6 +273,75 @@ a {
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin: 1em 0;
+}
+
+/* Formulaire de connexion */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-label-group input {
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.form-label-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.form-label-group input:focus,
+.form-label-group input:valid {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(219, 52, 52, 0.5);
+}
+
+.form-label-group input:focus + label,
+.form-label-group input:valid + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    opacity: 0.5;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+.btn--login {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn--login:hover {
+    background-color: #ff5a4d;
 }
 
 /* Pied de page */

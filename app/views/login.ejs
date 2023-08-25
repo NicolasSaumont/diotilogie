@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+
+<form action="" method="POST" class="form form--signin">
+
+    <div class="form-label-group">
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+            placeholder="Votre email">
+        <label for="email">Votre email</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" class="form-control" id="password" name="password"
+            placeholder="Votre mot de passe">
+        <label for="password">Votre mot de passe</label>
+    </div>
+    <button class="btn btn--login" type="submit">Se connecter</button>
+</form>
+
+<%- include('./partials/footer.ejs') %>
