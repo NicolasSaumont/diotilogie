@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS "user" (
 CREATE TABLE IF NOT EXISTS "question" (
   "id" serial PRIMARY KEY,
   "title" text NOT NULL,
-  "description" text NULL,
+  "description" varchar NULL,
   "image" text NULL,
   "user_id" integer NOT NULL REFERENCES "user" ("id"),
   "created_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,

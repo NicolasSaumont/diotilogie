@@ -9,12 +9,12 @@
         <a class="btn card_link card_link--tag" href="/tags/<%= tag.id %>">
             <div class="card_tag card_tag--<%= tag.name.toLowerCase() %>"><%= tag.name %></div>
         </a>
-        <% }) %>
+    <% }) %>
     <p class="page_author">Une question posée par <%= question.userOfQuestion.firstname %> <%= question.userOfQuestion.lastname %></p>
     <h2 class="page-title"><%= question.title %></h2>    
 </div>
 <div class="page_body">
-    <p class="page_description"><%= question.description %></p>
+    <p class="page_description"><%- texteAvecSautsDeLigne %></p>
     <a class="btn btn--hompage_link" href="/">
         Retour à la page d'accueil
     </a>

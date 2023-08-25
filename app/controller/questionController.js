@@ -19,7 +19,9 @@ const questionController = {
                 return res.status(404).json({ message: "Question not found. Please verify the provided id" });
             }
 
-            return res.status(201).render('question.ejs', { question });
+            const texteAvecSautsDeLigne = question.description.replace(/\n/g, '<br>');
+
+            return res.status(201).render('question.ejs', { question, texteAvecSautsDeLigne });
             
         } catch (error) {
             console.trace(error);
