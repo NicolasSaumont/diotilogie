@@ -26,15 +26,6 @@ const tagController = {
 
             const tagId = parseInt(req.params.id, 10);
 
-            // const questionsByTagId = await Tag.findAll({
-            //     where: {
-            //         'id': tagId
-            //     },
-            //     include: [
-            //         {association: 'questionsFromTags', include: ['userOfQuestion']},
-            //     ]
-            // }); 
-
             const tag = await Tag.findByPk(tagId, {
                 include: [
                     {association: 'questionsFromTags', include: ['userOfQuestion']},

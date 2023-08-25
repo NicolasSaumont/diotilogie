@@ -140,11 +140,11 @@ a {
 }
 
 .card_tag--cinema {
-    background-color: #02020B;
+    background-color: #272525;
     color: #fff;
 }
 .card_tag--cinema:hover {
-    background-color: #272525;
+    background-color: #02020B;
 }
 
 .card_tag--geek {
@@ -238,6 +238,36 @@ a {
 
 .card_link--question:hover {
     background-color: #ff5a4d;
+}
+
+/* Page Question */
+.img_container {
+    position: relative;
+    height: 15em;
+    overflow: hidden;
+}
+
+.page_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.page_body {
+    text-align: left;
+}
+
+.btn--hompage_link {
+    display: inline-block;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 1em 0;
 }
 
 /* Pied de page */
