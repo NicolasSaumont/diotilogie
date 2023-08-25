@@ -76,7 +76,20 @@ const mainController = {
             res.status(500).send({ message: error.message });
         };
 
-    }
+    },
+
+    async logout(req,res){
+
+        try{
+
+            req.session.destroy(res.redirect("/"));
+
+        } catch (error) {
+            console.trace(error);
+            res.status(500).send({ message: error.message });
+        };
+
+    },
     
 
 };

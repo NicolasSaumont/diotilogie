@@ -7,6 +7,7 @@ const questionController = require('./controller/questionController');
 // Main url
 router.get('/', mainController.homePage);
 router.get('/login', mainController.loginPage);
+router.get("/logout", mainController.logout);
 
 router.post('/login', mainController.postLogin);
 
