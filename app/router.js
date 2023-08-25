@@ -6,6 +6,7 @@ const questionController = require('./controller/questionController');
 
 // Main url
 router.get('/', mainController.homePage);
+// router.get('/login', mainController.loginPage);
 
 // Tags url 
 router.get('/tags', tagController.getTags);

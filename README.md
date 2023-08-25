@@ -104,7 +104,19 @@ Que ce soit pour comprendre les mystères de la science, les curiosités de la n
 <!-- GETTING STARTED -->
 ## Commencer
 
-Visitez https://www.diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://www.diotilogie.nicolassaumont.com).
+Visitez https://diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://diotilogie.nicolassaumont.com). Si vous voulez accéder au projet en local, veuillez suivre les étapes suivantes :
+
+### Installation
+
+- Clonez ou téléchargez le projet depuis son dépôt Github.
+- Placez-vous au répertoire du projet.
+- Lancez `npm install` pour installer les modules node nécessaires.
+
+### Execution
+
+- Placez-vous à la racine du projet.
+- Lancez l'application en utilisant la commande : `npm start`
+- Ouvrez un navigateur et aller sur `http://localhost:3000` pour accéder à l'application.
 
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
@@ -133,7 +145,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Voir la liste des questions
 - [x] Voir la liste des catégories
 - [x] Voir la liste des questions par catégorie
-- [ ] Voir le détail des questions
+- [x] Voir le détail des questions
 - [ ] Identification d'un utilisateur
 - [ ] Inscription d'un utilisateur
 - [ ] Connexion d'un utilisateur

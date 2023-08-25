@@ -9,14 +9,19 @@
 </head>
 <body>
     <header class="site-header">
-        <h1 class="site-title">Diotilogie</h1>
+        <h1 class="site-title">
+            <img class="site_banner" src="/img/screenshot.png" alt="banniere de diotilogie">
+        </h1>
         <nav class="main-menu">
             <a class="main-menu_item" href="/">Accueil</a>
             <a class="main-menu_item" href="/tags">Catégories</a>
-            <a class="main-menu_item" href="/">S'inscrire</a>
-            <a class="main-menu_item" href="/">Se connecter</a>
-            <a class="main-menu_item" href="/">Mon profil</a>
-            <a class="main-menu_item" href="/">Se déconnecter</a>
+            <%if (!user){%>
+                <a class="main-menu_item" href="/signup">S'inscrire</a>
+                <a class="main-menu_item" href="/login">Se connecter</a>
+            <%}else{%>
+                <a class="main-menu_item" href="/profil/<%=lastname%>">Mon profil</a>
+                <a class="main-menu_item" href="/logout">Déconnecter <%=firstname%> <%=lastname%></a>
+            <%}%>
         </nav>
     </header>
     <main class="container">

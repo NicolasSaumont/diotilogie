@@ -40,6 +40,11 @@ a {
     margin-bottom: 10px;
 }
 
+.site_banner {
+    width:15%;
+    border-radius: 0.2em;
+}
+
 .main-menu {
     margin-top: 10px;
 }
