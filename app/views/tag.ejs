@@ -7,7 +7,7 @@
     <% tag.questionsFromTags.forEach(question => { %>
         <card class="card">
             <div class="card_header">
-                <img class="card_img" src="/img/<%= question.image %>.jpg" alt="picture showing <%= question.image %>">
+                <img class="card_img" src="/img/<%= question.picture %>.jpg" alt="picture showing <%= question.picture %>">
                     
                 <h3 class="card_title"><%= question.title %></h3>
                
@@ -16,7 +16,6 @@
                 <a class="btn card_link card_link--question" href="/question/<%= question.id %>">
                     Voir la réponse
                 </a>
-                <p class="card_author">Une question posée par <%= question.userOfQuestion.firstname %> <%= question.userOfQuestion.lastname %></p>
             </div>
         </card>
     <% }) %>

@@ -60,8 +60,7 @@ const mainController = {
             if(user){
 
                 req.session.user = user.dataValues.email;
-                req.session.firstname = user.dataValues.firstname;
-                req.session.lastname = user.dataValues.lastname;
+                req.session.username = user.dataValues.username;
                 res.redirect('/');
 
             } else {

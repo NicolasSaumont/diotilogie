@@ -28,7 +28,7 @@ const tagController = {
 
             const tag = await Tag.findByPk(tagId, {
                 include: [
-                    {association: 'questionsFromTags', include: ['userOfQuestion']},
+                    {association: 'questionsFromTags'},
                 ]
             });
 
