@@ -151,7 +151,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Connexion d'un utilisateur
 - [ ] Rédaction d'un commentaire
 - [ ] Enregistrement d'un commentaire
-- [ ] Afficher la page de profil d'un utilisateur
+- [x] Afficher la page de profil d'un utilisateur
+- [ ] Afficher les commentaires d'un utilisateur
 - [x] Déconnexion d'un utilisateur
 
   
