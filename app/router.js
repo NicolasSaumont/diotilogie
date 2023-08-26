@@ -11,7 +11,6 @@ router.get("/logout", mainController.logout);
 
 router.post('/login', mainController.postLogin);
 
-
 // Tags url 
 router.get('/tags', tagController.getTags);
 router.get('/tags/:id', tagController.getQuestionsByTagId);
@@ -20,6 +19,7 @@ router.get('/tags/:id', tagController.getQuestionsByTagId);
 router.get('/question/:id', questionController.getQuestionById);
 
 // Users url
+// router.get("/profil/:user", mainController.profilUserPage);
 
 
 module.exports = router;

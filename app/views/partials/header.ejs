@@ -15,12 +15,12 @@
         <nav class="main-menu">
             <a class="main-menu_item" href="/">Accueil</a>
             <a class="main-menu_item" href="/tags">Catégories</a>
-            <%if (!user){%>
+            <%if (!userMail){%>
                 <a class="main-menu_item" href="/signup">S'inscrire</a>
                 <a class="main-menu_item" href="/login">Se connecter</a>
             <%}else{%>
-                <a class="main-menu_item" href="/profil/<%=lastname%>">Mon profil</a>
-                <a class="main-menu_item" href="/logout">Déconnecter <%=firstname%> <%=lastname%></a>
+                <a class="main-menu_item" href="/profil/<%= userID %>">Mon profil</a>
+                <a class="main-menu_item" href="/logout">Déconnecter <%= username %></a>
             <%}%>
         </nav>
     </header>

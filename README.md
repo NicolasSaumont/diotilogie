@@ -148,11 +148,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Voir le détail des questions
 - [x] Identification d'un utilisateur
 - [ ] Inscription d'un utilisateur
+- [x] Connexion d'un utilisateur
 - [ ] Rédaction d'un commentaire
 - [ ] Enregistrement d'un commentaire
-- [x] Connexion d'un utilisateur
-- [x] Déconnexion d'un utilisateur
 - [ ] Afficher la page de profil d'un utilisateur
+- [x] Déconnexion d'un utilisateur
 
   
 

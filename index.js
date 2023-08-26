@@ -27,7 +27,8 @@ app.use(express.static(path.join(__dirname, './public')))
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req,res,next)=>{
-  res.locals.user = req.session.user;
+  res.locals.userID = req.session.userID;
+  res.locals.userMail = req.session.userMail;
   res.locals.username = req.session.username;
   next();
 });
