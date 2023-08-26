@@ -1,6 +1,6 @@
 utilisateur: code utilisateur, pseudo, email, mot de passe  
 question: code question, titre, description, image
-catégorie: code thème, nom
+catégorie: code catégorie, nom
 commentaire: code_commentaire, description
 
 créer, 0N utilisateur, 11 commentaire

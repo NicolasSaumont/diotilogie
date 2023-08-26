@@ -1,5 +1,6 @@
-utilisateur(id, prenom, nom, email, mot de passe)
-question(id, titre, description, lien_image, #utilisateur(id))
-categorie(id, nom)
+user(id, username, email, password)
+question(id, title, description, picture)
+tag(id, name)
+comment(id, description, #user(id), #question(id))
 
 question AVOIR categorie (#question(id), #categorie(id))
