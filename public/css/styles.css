@@ -41,7 +41,7 @@ a {
 }
 
 .site_banner {
-    width:15%;
+    max-width: 35%;
     border-radius: 0.2em;
 }
 
@@ -362,4 +362,10 @@ a {
     .container {
         padding: 10px;
     }
+
+    .site_banner {
+        max-width:60%;
+        border-radius: 0.2em;
+    }
+
 }
