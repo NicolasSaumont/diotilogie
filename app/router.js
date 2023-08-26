@@ -19,7 +19,7 @@ router.get('/tags/:id', tagController.getQuestionsByTagId);
 router.get('/question/:id', questionController.getQuestionById);
 
 // Users url
-// router.get("/profil/:user", mainController.profilUserPage);
+router.get("/profil/:user", mainController.profilUserPage);
 
 
 module.exports = router;
