@@ -9,7 +9,6 @@ const mainController = {
 
             const questions = await Question.findAll({
                 include: [
-                    {association: 'userOfQuestion'},
                     {association: 'tagsFromQuestion'},
                 ],
             });

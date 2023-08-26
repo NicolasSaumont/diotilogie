@@ -1,19 +1,33 @@
 const User = require('./user');
 const Question = require('./question');
 const Tag = require('./tag');
+const Comment = require('./comment');
 
-//! Association user - question
-// Un user peut créer plusieurs questions
-User.hasMany(Question, {
-    as: 'questionsFromUser',
+//! Association user - commentaire
+// Un user peut créer plusieurs commentaires
+User.hasMany(Comment, {
+    as: 'commentsFromUser',
     foreignKey: 'user_id'
 });
 
-// Une question est créée par un seul user
-Question.belongsTo(User, {
-    as: 'userOfQuestion',
+// Un commentaire est créée par un seul user
+Comment.belongsTo(User, {
+    as: 'userOfComment',
     foreignKey: 'user_id'
 });
+
+//! Association commentaire - question
+// Un commentaire précise une question
+Comment.belongsTo(Question, {
+    as: 'questionOfComment',
+    foreignKey: 'question_id'
+})
+
+// Une question peut être précisée par plusieurs commentaires
+Question.hasMany(Comment, {
+    as: 'commentsFromQuestion',
+    foreignKey: 'question_id'
+})
 
 //! Association tag - question
 // Une question peut appartenir a plusieurs tags

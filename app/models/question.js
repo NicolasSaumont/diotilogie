@@ -12,7 +12,7 @@ Question.init({
     type: DataTypes.STRING,
     allowNull: true,
   },
-  image: {
+  picture: {
     type: DataTypes.STRING,
     allowNull: true,
   }
