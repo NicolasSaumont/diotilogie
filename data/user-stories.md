@@ -9,12 +9,18 @@
 | Visiteur | accéder à la page de signin | m'inscrire |
 | Visiteur | m'inscrire | - |
 | Visiteur | afficher les questions en fonction de leur catégorie | - |
-| Visiteur | voir l'auteur de la question | - | 
-| Visiteur | voir le titre de la question | - |
+| Visiteur | afficher l'ensemble des catégories | - | 
 | Visiteur | voir la liste des questions | - |
+| Visiteur | voir le titre de la question | - |
+| Visiteur | voir la catégorie de la question | - |
+| Visiteur | accéder aux détails d'une question | |
 | Membre | me connecter| - |
-| Membre | accéder aux détails d'une question | |
-| Membre | afficher la page de mon profil | - |
+| Membre | me déconnecter| - |
+| Membre | écrire des commentaires sur les pages "question"  | - |
+| Membre | afficher la page de mon profil qui contient mes informations personnelles et la liste de mes commentaires | - |
+| Membre | modifier mes informations personnelles | - |
+| Membre | modifier mes commentaires | - |
+| Membre | supprimer un de mes commentaires | - |
 
 visiteur : utilisateur non connecté
 membre : utilisateur authentifié
