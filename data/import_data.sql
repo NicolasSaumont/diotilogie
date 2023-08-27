@@ -4,8 +4,8 @@ BEGIN;
 -- Déchargement des données de la table "user"
 --
 
-INSERT INTO "user" ("id", "email", "password", "username") VALUES
-(1, 'admin@diotilogie.com', 'admin', 'Admin');
+-- INSERT INTO "user" ("id", "email", "password", "username") VALUES
+-- (1, 'admin@diotilogie.com', 'admin', 'Admin');
 
 --
 -- Déchargement des données de la table "question"

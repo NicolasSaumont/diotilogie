@@ -328,7 +328,8 @@ a {
     padding: 0 5px;
 }
 
-.btn--login {
+.btn--login,
+.btn--signin {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -340,7 +341,8 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.btn--login:hover {
+.btn--login:hover,
+.btn--signin:hover {
     background-color: #ff5a4d;
 }
 
