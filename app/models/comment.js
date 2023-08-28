@@ -10,7 +10,7 @@ Comment.init({
   }
 }, {
   sequelize,
-  tableName: "user",
+  tableName: "comment",
 });
 
 module.exports = Comment;

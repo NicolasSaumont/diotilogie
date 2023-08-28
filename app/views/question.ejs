@@ -13,10 +13,29 @@
     <h2 class="page-title"><%= question.title %></h2>    
 </div>
 <div class="page_body">
+
     <p class="page_description"><%- texteAvecSautsDeLigne %></p>
+
+    <h3 class="comments-title">Commentaires</h3>
+
+    <section class="comments">
+        <form action="POST" class="form form--comment">
+
+            <div class="form-label-group">
+                <input type="text" class="form-control" id="comment-description" name="comment-description"
+                    placeholder="Votre commentaire">
+                <label for="comment-description">Votre commentaire</label>
+            </div>
+
+            <button class="btn btn--signin" type="submit">Envoyer</button>
+
+        </form>
+    </section>
+
     <a class="btn btn--homepage_link" href="/">
         Retour à la page d'accueil
     </a>
+
 </div>
         
 <%- include('./partials/footer.ejs') %>

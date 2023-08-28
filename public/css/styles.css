@@ -264,6 +264,15 @@ a {
     text-align: left;
 }
 
+.comments-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.page_description {
+    margin-bottom: 2em;
+}
+
 .btn--homepage_link {
     display: inline-block;
     background-color: #ff6f61;
@@ -292,6 +301,10 @@ a {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+}
+
+.form--comment {
+    max-width: none;
 }
 
 .form-label-group {

@@ -10,7 +10,7 @@ const questionController = {
 
             const question = await Question.findByPk(questionId, {
                 include: [
-                    // {association: 'commentsFromQuestion'},
+                    {association: 'commentsFromQuestion'},
                     {association: 'tagsFromQuestion'},
                 ],
             });

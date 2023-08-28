@@ -24,4 +24,6 @@ router.get('/question/:id', questionController.getQuestionById);
 // Users url
 router.get("/profil/:user", userController.profilUserPage);
 
+// Comments url
+
 module.exports = router;
