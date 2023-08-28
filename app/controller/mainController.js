@@ -105,7 +105,9 @@ const mainController = {
 
         try {
 
-            res.render('signup.ejs');
+            const errorMessage = "";
+
+            return res.render('signup.ejs', { errorMessage });
 
         } catch (error) {
             console.trace(error);
@@ -119,9 +121,10 @@ const mainController = {
             const username = req.body.username;
             const email = req.body.email;
             const password = req.body.password
-
+            
             if (!username || !email || !password) {
-                throw new Error("Tous les champs doivent être remplis");
+                const errorMessage = "*Tous les champs doivent être remplis";
+                return res.render('signup.ejs', { errorMessage });
             }; 
 
             const existingUser = await User.findOne({
@@ -131,16 +134,19 @@ const mainController = {
             });
 
             if (existingUser) {
-                throw new Error('User already exist');
+                const errorMessage = "*L'utilisateur existe déjà";
+                return res.render('signup.ejs', { errorMessage });
             };
 
             if (emailValidator.validate(req.body.email) !== true) {
-                throw new Error("Format de l'email invalide");
+                const errorMessage = "*Format de l'email invalide";
+                return res.render('signup.ejs', { errorMessage });
             };
 
 
             if (req.body.password !== req.body.passwordConfirm) {
-                throw new Error('Les mots de passe doivent être identiques')
+                const errorMessage = "*Les mots de passe doivent être identiques";
+                return res.render('signup.ejs', { errorMessage });
             };
 
             const hashedPassword = await bcrypt.hash(password, 10);

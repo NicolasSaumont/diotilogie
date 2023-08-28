@@ -276,6 +276,14 @@ a {
 }
 
 /* Formulaire de connexion */
+
+.error-message {
+    color: #920606;
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
 .form {
     max-width: 400px;
     margin: 0 auto;
