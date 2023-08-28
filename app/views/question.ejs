@@ -16,9 +16,10 @@
 
     <p class="page_description"><%- texteAvecSautsDeLigne %></p>
 
-    <h3 class="comments-title">Commentaires</h3>
-
     <section class="comments">
+        
+        <h3 class="comments-title">Commentaires</h3>
+        
         <form action="POST" class="form form--comment">
 
             <div class="form-label-group">
@@ -30,6 +31,14 @@
             <button class="btn btn--signin" type="submit">Envoyer</button>
 
         </form>
+
+        <% question.commentsFromQuestion.forEach(comment => { %>
+            <div class="comment">
+                <p class="comment-author-date">Commentaire posté par <strong><%= comment.userOfComment.username %></strong> le <%= comment.created_at.toLocaleDateString("fr") %></p>
+                <p class="comment-description"><%= comment.description %></p>
+            </div>
+        <% }) %>
+
     </section>
 
     <a class="btn btn--homepage_link" href="/">

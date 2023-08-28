@@ -4,8 +4,8 @@ BEGIN;
 -- Déchargement des données de la table "user"
 --
 
--- INSERT INTO "user" ("id", "email", "password", "username") VALUES
--- (1, 'admin@diotilogie.com', 'admin', 'Admin');
+INSERT INTO "user" ("id", "email", "password", "username") VALUES
+(1, 'admin@diotilogie.com', 'admin', 'Admin');
 
 --
 -- Déchargement des données de la table "question"
@@ -885,6 +885,12 @@ INSERT INTO "tag" ("id", "name") VALUES
 (11, 'Psychologie'),
 (12, 'Religion'),
 (13, 'Sociologie');
+
+--
+-- Déchargement des données de la table "comment"
+--
+INSERT INTO "comment" ("description", "question_id", "user_id") VALUES
+('Ceci est un commentaire test', 1, 1);
 
 --
 -- Déchargement des données de la table "question_has_tag"

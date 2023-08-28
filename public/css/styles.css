@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+strong {
+    font-weight: bold;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -269,6 +273,18 @@ a {
     margin: 20px 0;
 }
 
+.comment {
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.comment-author-date {
+    font-style: italic;
+}
+
 .page_description {
     margin-bottom: 2em;
 }
@@ -305,6 +321,7 @@ a {
 
 .form--comment {
     max-width: none;
+    margin-bottom: 1em;
 }
 
 .form-label-group {
