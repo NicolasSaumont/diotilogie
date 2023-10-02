@@ -149,7 +149,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Identification d'un utilisateur
 - [x] Inscription d'un utilisateur
 - [x] Connexion d'un utilisateur
-- [ ] Rédaction d'un commentaire
+- [x] Rédaction d'un commentaire
 - [ ] Enregistrement d'un commentaire
 - [x] Afficher la page de profil d'un utilisateur
 - [ ] Afficher les commentaires d'un utilisateur

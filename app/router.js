@@ -4,6 +4,7 @@ const mainController = require('./controller/mainController');
 const tagController = require('./controller/tagController');
 const questionController = require('./controller/questionController');
 const userController = require('./controller/userController');
+const commentController = require('./controller/commentController');
 
 // Main url
 router.get('/', mainController.homePage);
@@ -25,5 +26,7 @@ router.get('/question/:id', questionController.getQuestionById);
 router.get("/profil/:user", userController.profilUserPage);
 
 // Comments url
+router.post("/question", commentController.postComment);
+
 
 module.exports = router;
