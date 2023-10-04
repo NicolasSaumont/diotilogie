@@ -3,7 +3,7 @@
 
 <div class="page_header">
     <div class="img_container">
-        <img class="page_img" src="/img/<%= question.picture %>.jpg" alt="picture showing <%= question.picture %>">
+        <img class="page_img" src="/img/img_articles/<%= question.picture %>.jpg" alt="picture showing <%= question.picture %>">
     </div>
     <% question.tagsFromQuestion.forEach(tag => { %>
         <a class="btn card_link card_link--tag" href="/tags/<%= tag.id %>">

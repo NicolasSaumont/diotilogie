@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diotilogie</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <header class="site-header">
-        <h1 class="site-title">
-            <img class="site_banner" src="/img/screenshot.png" alt="banniere de diotilogie">
-        </h1>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <img
+          class="site-header__image"
+          src="/img/header-image.jpg"
+          alt="image de presentation"
+        />
         <nav class="main-menu">
-            <a class="main-menu_item" href="/">Accueil</a>
-            <a class="main-menu_item" href="/tags">Catégories</a>
-            <%if (!userMail){%>
-                <a class="main-menu_item" href="/signup">S'inscrire</a>
-                <a class="main-menu_item" href="/login">Se connecter</a>
-            <%}else{%>
-                <a class="main-menu_item" href="/profil/<%= userID %>">Mon profil</a>
-                <a class="main-menu_item" href="/logout">Déconnecter <%= username %></a>
-            <%}%>
+          <a class="main-menu_item" href="/">
+            <img class="main-menu__icon" src="/img/icons/home.png" alt="main menu home icon">
+            <p class="main-menu__text">Accueil</p>
+          </a>
+          <a class="main-menu_item" href="/tags">
+            <img class="main-menu__icon" src="/img/icons/tags.png" alt="main menu tags icon">
+            <p class="main-menu__text">Catégories</p>
+          </a>
+          <%if (!userMail){%>
+          <a class="main-menu_item" href="/signup">
+            <img class="main-menu__icon" src="/img/icons/signIn.png" alt="main menu sigup icon">
+            <p class="main-menu__text">S'enregistrer</p>
+          </a>
+          <a class="main-menu_item" href="/login">
+            <img class="main-menu__icon" src="/img/icons/logIn.png" alt="main menu login icon">
+            <p class="main-menu__text">Se connecter</p>
+          </a>
+          <%}else{%>
+          <a class="main-menu_item" href="/profil/<%= userID %>">
+            <img class="main-menu__icon" src="/img/icons/userProfile.png" alt="main menu user profile icon">
+            <p class="main-menu__text">
+                Mon profil </p>
+        </a>
+          <a class="main-menu_item" href="/logout"
+            >
+            <img class="main-menu__icon" src="/img/icons/logOut.png" alt="main menu logout icon">
+            <p class="main-menu__text">Déconnection</p>
+        </a
+          >
+          <%}%>
         </nav>
-    </header>
-    <main class="container">
+      </header>
+      <main>

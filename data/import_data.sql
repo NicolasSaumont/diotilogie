@@ -871,20 +871,20 @@ En résumé, dire « Allo » en répondant au téléphone a ses origines dans le
 -- Déchargement des données de la table "tag"
 --
 
-INSERT INTO "tag" ("id", "name") VALUES
-(1, 'Anatomie'),
-(2, 'Astronomie'),
-(3, 'Biologie'),
-(4, 'Chimie'),
-(5, 'Cinema'),
-(6, 'Geek'),
-(7, 'Geologie'),
-(8, 'Histoire'),
-(9, 'Physique'),
-(10, 'PhysiqueQuantique'),
-(11, 'Psychologie'),
-(12, 'Religion'),
-(13, 'Sociologie');
+INSERT INTO "tag" ("id", "name", "icon") VALUES
+(1, 'Anatomie', 'anatomy'),
+(2, 'Astronomie', 'astronomy'),
+(3, 'Biologie', 'biology'),
+(4, 'Chimie', 'chemistry'),
+(5, 'Cinema', 'cinema'),
+(6, 'Geek', 'geek'),
+(7, 'Geologie', 'geology'),
+(8, 'Histoire', 'history'),
+(9, 'Physique', 'physics'),
+(10, 'PhysiqueQuantique', 'quantum'),
+(11, 'Psychologie', 'psychology'),
+(12, 'Religion', 'religion'),
+(13, 'Sociologie', 'sociology');
 
 --
 -- Déchargement des données de la table "comment"

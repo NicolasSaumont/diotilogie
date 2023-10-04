@@ -1,411 +1,384 @@
 /* Réinitialisation des styles par défaut */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, p, ul, li {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 /* Styles de base */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #555;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #223036;
+  color: #f8f8f8;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* En-tête */
 .site-header {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  position: relative;
+  color: #f8f8f8;
+  text-align: center;
 }
 
-.site-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.site_banner {
-    max-width: 35%;
-    border-radius: 0.2em;
+.site-header__image {
+  position: relative;
+  width: 100%;
 }
 
 .main-menu {
-    margin-top: 10px;
+  display: flex;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
 }
 
 .main-menu_item {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-    font-weight: bold;
+  color: #f8f8f8;
+  margin-right: 1em;
 }
 
-.main-menu_item:hover {
-    color: #f9e07f;
-    letter-spacing: 0.01em;
+.main-menu__icon {
+  width: 30px;
+  margin: 0 1em;
+  opacity: 0.7;
+  transition: all 0.1s ease-in-out;
+}
+
+.main-menu_item:hover .main-menu__icon {
+  width: 40px;
+  opacity: 1;
+}
+
+.main-menu__text {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.1s ease-in-out;
+  white-space: nowrap;
+}
+
+.main-menu_item:hover .main-menu__text {
+  width: 100px;
 }
 
 /* Section principale */
+
+.page-title,
+.page-subtitle {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #f6c963;
+}
+
 .page-title {
-    font-size: 2rem;
-    margin: 20px 0;
+  font-size: 4rem;
+  margin-top: 0.4em;
+}
+
+.page-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
 }
 
 .site-description {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.main__banner {
+  width: 100%;
+}
+
+.main__banner--up {
+  transform: translateY(20%);
+}
+
+.main__banner--down {
+  transform: translateY(-20%);
 }
 
 /* Cartes */
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card {
-    max-width: 300px;
-    border: 1px solid #ddd;
-    margin: 1em;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f8f8f8;
 }
 
 .card_header {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  position: relative;
+  padding: 1em;
+}
+
+.card_img-container {
+  width: 15em;
+  height: 15em;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 .card_img {
-    width: 100%;
-    height: 11em;
-    border-radius: 0.5em;
+  width: auto;
+  height: auto;
+  filter: sepia(100%);
+  opacity: 0.8;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_img-container:hover .card_img {
+  filter: sepia(0%);
+  opacity: 1;
+}
+
+.card_img::before,
+.card_img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/paper-texture.jpg');
+  mix-blend-mode: multiply;
+}
+
+.tags-container {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .card_link--tag {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 3px;
-    text-decoration: none;
+  display: inline-block;
+  background-color: #223036;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 0 0.2em;
+  transition: all 0.2s ease-in-out;
+}
+
+.card_link--tag:hover {
+  width: 70px;
+  height: 70px;
 }
 
 .card_tag {
-    border-radius: 0.4em;
-    padding: 0.2em 0.5em;
-    color: #333;
-    margin-bottom: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.card_tag--anatomie {
-    background-color: #D36135;
-    color: #fff;
-}
-.card_tag--anatomie:hover {
-    background-color: #B54C23;
-}
-
-.card_tag--astronomie {
-    background-color: #7FB069;
-    color: #fff;
-}
-.card_tag--astronomie:hover {
-    background-color: #6A9D52;
-}
-
-.card_tag--biologie {
-    background-color: #ECE4B7;
-}
-.card_tag--biologie:hover {
-    background-color: #D5CC9C;
-}
-
-.card_tag--chimie {
-    background-color: #E6AA68;
-}
-.card_tag--chimie:hover {
-    background-color: #D69651;
-}
-
-.card_tag--cinema {
-    background-color: #272525;
-    color: #fff;
-}
-.card_tag--cinema:hover {
-    background-color: #02020B;
-}
-
-.card_tag--geek {
-    background-color: #778472;
-    color: #fff;
-}
-.card_tag--geek:hover {
-    background-color: #5C6C56;
-}
-
-.card_tag--geologie {
-    background-color: #4C1A57;
-    color: #fff;
-}
-.card_tag--geologie:hover {
-    background-color: #371040;
-}
-
-.card_tag--histoire {
-    background-color: #FF3CC7;
-    color: #fff;
-}
-.card_tag--histoire:hover {
-    background-color: #E42AAF;
-}
-
-.card_tag--physique {
-    background-color: #F0F600;
-}
-.card_tag--physique:hover {
-    background-color: #D6DA04;
-}
-
-.card_tag--physiquequantique {
-    background-color: #00E5E8;
-}
-.card_tag--physiquequantique:hover {
-    background-color: #02BABD;
-    color: #fff;
-}
-
-.card_tag--psychologie {
-    background-color: #007C77;
-    color: #fff;
-}
-.card_tag--psychologie:hover {
-    background-color: #01625F;
-}
-
-.card_tag--religion {
-    background-color: #BF0603;
-    color: #fff;
-}
-.card_tag--religion:hover {
-    background-color: #A00502;
-}
-
-.card_tag--sociologie {
-    background-color: #018E42;
-    color: #fff;
-}
-.card_tag--sociologie:hover {
-    background-color: #026A33;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card_title {
-    background-color: #f9e07f;
-    font-size: 1.2rem;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #223036;
+  color: #f6c963;
+  opacity: 0;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
 }
 
-.card_body {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.card_link--question {
-    display: inline-block;
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    align-self: center;
-    margin: 1em 0;
-}
-
-.card_link--question:hover {
-    background-color: #ff5a4d;
+.card_img-container:hover .card_title {
+  opacity: 0.9;
 }
 
 /* Page Question */
 .img_container {
-    position: relative;
-    height: 15em;
-    overflow: hidden;
+  position: relative;
+  height: 15em;
+  overflow: hidden;
 }
 
 .page_img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
 }
 
 .page_body {
-    text-align: left;
+  text-align: left;
 }
 
 .comments-title {
-    font-size: 1.5rem;
-    margin: 20px 0;
+  font-size: 1.5rem;
+  margin: 20px 0;
 }
 
 .comment {
-    padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .comment-author-date {
-    font-style: italic;
+  font-style: italic;
 }
 
 .page_description {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .btn--homepage_link {
-    display: inline-block;
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin: 1em 0;
+  display: inline-block;
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 1em 0;
 }
 
 /* Formulaire de connexion */
 
 .error-message {
-    color: #920606;
-    font-weight: bold;
-    margin-bottom: 1em;
-    font-style: italic;
+  color: #920606;
+  font-weight: bold;
+  margin-bottom: 1em;
+  font-style: italic;
 }
 
 .form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .form--comment {
-    max-width: none;
-    margin-bottom: 1em;
+  max-width: none;
+  margin-bottom: 1em;
 }
 
 .form-label-group {
-    position: relative;
-    margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .form-label-group input {
-    height: 40px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    margin-bottom: 1em;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 .form-label-group label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    font-size: 16px;
-    color: #666;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 16px;
+  color: #666;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .form-label-group input:focus,
 .form-label-group input:valid {
-    border-color: #ff6f61;
-    box-shadow: 0 0 8px rgba(219, 52, 52, 0.5);
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(219, 52, 52, 0.5);
 }
 
 .form-label-group input:focus + label,
 .form-label-group input:valid + label {
-    transform: translateY(-20px);
-    font-size: 12px;
-    opacity: 0.5;
-    background-color: #fff;
-    padding: 0 5px;
+  transform: translateY(-20px);
+  font-size: 12px;
+  opacity: 0.5;
+  background-color: #fff;
+  padding: 0 5px;
 }
 
 .btn--login,
 .btn--signin {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff6f61;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn--login:hover,
 .btn--signin:hover {
-    background-color: #ff5a4d;
+  background-color: #ff5a4d;
 }
 
 /* Pied de page */
 .site-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+  background-color: #223036;
+  color: #f6c963;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
 }
 
 .site-footer a {
-    color: #fff;
+  color: #f6c963;
 }
 
 /* Rendu spécifique pour les petits écrans */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    .site_banner {
-        max-width:60%;
-        border-radius: 0.2em;
-    }
-
+  .site_banner {
+    max-width: 60%;
+    border-radius: 0.2em;
+  }
 }
