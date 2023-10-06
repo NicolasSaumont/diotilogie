@@ -20,6 +20,7 @@ router.get('/tags', tagController.getTags);
 router.get('/tags/:id', tagController.getQuestionsByTagId);
 
 // Questions url
+router.get('/questions', questionController.getQuestions);
 router.get('/question/:id', questionController.getQuestionById);
 
 // Users url
