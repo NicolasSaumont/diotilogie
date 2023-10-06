@@ -7,7 +7,7 @@ const userController = require('./controller/userController');
 const commentController = require('./controller/commentController');
 
 // Main url
-router.get('/', mainController.homePage, tagController.getTags);
+router.get('/', mainController.homePage);
 router.get('/login', mainController.loginPage);
 router.get('/logout', mainController.logout);
 router.get('/signup', mainController.signupPage);
@@ -17,11 +17,7 @@ router.post('/signup', mainController.postSignup);
 
 // Tags url
 router.get('/tags', tagController.getTags);
-router.get(
-  '/tags/:id',
-  tagController.getQuestionsByTagId,
-  tagController.getTags
-);
+router.get('/tags/:id', tagController.getQuestionsByTagId);
 
 // Questions url
 router.get('/questions', questionController.getQuestions);
