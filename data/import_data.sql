@@ -881,7 +881,7 @@ INSERT INTO "tag" ("id", "name", "icon") VALUES
 (7, 'Geologie', 'geology'),
 (8, 'Histoire', 'history'),
 (9, 'Physique', 'physics'),
-(10, 'PhysiqueQuantique', 'quantum'),
+(10, 'Ph.Quantique', 'quantum'),
 (11, 'Psychologie', 'psychology'),
 (12, 'Religion', 'religion'),
 (13, 'Sociologie', 'sociology');

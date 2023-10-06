@@ -7,7 +7,7 @@ const userController = require('./controller/userController');
 const commentController = require('./controller/commentController');
 
 // Main url
-router.get('/', mainController.homePage);
+router.get('/', mainController.homePage, tagController.getTags);
 router.get('/login', mainController.loginPage);
 router.get('/logout', mainController.logout);
 router.get('/signup', mainController.signupPage);
@@ -15,7 +15,7 @@ router.get('/signup', mainController.signupPage);
 router.post('/login', mainController.postLogin);
 router.post('/signup', mainController.postSignup);
 
-// Tags url 
+// Tags url
 router.get('/tags', tagController.getTags);
 router.get('/tags/:id', tagController.getQuestionsByTagId);
 
@@ -23,10 +23,9 @@ router.get('/tags/:id', tagController.getQuestionsByTagId);
 router.get('/question/:id', questionController.getQuestionById);
 
 // Users url
-router.get("/profil/:user", userController.profilUserPage);
+router.get('/profil/:user', userController.profilUserPage);
 
 // Comments url
-router.post("/question", commentController.postComment);
-
+router.post('/question', commentController.postComment);
 
 module.exports = router;

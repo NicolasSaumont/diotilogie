@@ -28,8 +28,28 @@ a {
   text-decoration: none;
 }
 
+a button {
+  margin: 1em;
+}
+
 strong {
   font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 0.7em;
+  border: #223036 2px solid;
+  background-color: #223036;
+  color: #f8f8f8;
+  font-size: 1.1rem;
+  padding: 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #f6c963;
+  color: #223036;
 }
 
 .container {
@@ -90,7 +110,8 @@ strong {
 /* Section principale */
 
 .page-title,
-.page-subtitle {
+.page-subtitle,
+.section-title {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #f6c963;
 }
@@ -171,7 +192,7 @@ strong {
   mix-blend-mode: multiply;
 }
 
-.tags-container {
+.card__tags-container {
   display: flex;
   justify-content: right;
   position: absolute;
@@ -180,7 +201,8 @@ strong {
   z-index: 2;
 }
 
-.card_link--tag {
+.card_link--tag,
+.section-tags__link-tag {
   display: inline-block;
   background-color: #223036;
   border-radius: 50%;
@@ -196,7 +218,8 @@ strong {
   height: 70px;
 }
 
-.card_tag {
+.card_tag,
+.tag {
   position: absolute;
   width: 70%;
   top: 50%;
@@ -221,6 +244,37 @@ strong {
 
 .card_img-container:hover .card_title {
   opacity: 0.9;
+}
+
+/* Section catégories */
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+
+.tags-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tags-container__tag {
+  margin: 0.5em 1em;
+}
+
+.tag-text {
+  color: #f6c963;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.section-tags__link-tag:hover + .tag-text {
+  opacity: 1;
 }
 
 /* Page Question */
@@ -368,7 +422,7 @@ strong {
 }
 
 .site-footer a {
-  color: #f6c963;
+  color: #f8f8f8;
 }
 
 /* Rendu spécifique pour les petits écrans */

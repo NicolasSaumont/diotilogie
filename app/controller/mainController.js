@@ -2,15 +2,46 @@ const bcrypt = require('bcrypt');
 const emailValidator = require('email-validator');
 const { Question } = require('../models');
 const { User } = require('../models');
+const { Tag } = require('../models');
 
 const mainController = {
+  shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    return array;
+  },
+
   async homePage(req, res) {
     try {
       const questions = await Question.findAll({
         include: [{ association: 'tagsFromQuestion' }],
       });
 
-      return res.status(201).render('index.ejs', { questions });
+      const questionsAlreadyShown = new Set();
+
+      const uniqueQuestions = [];
+
+      const shuffledQuestions = mainController.shuffleArray(questions);
+
+      for (const question of shuffledQuestions) {
+        if (!questionsAlreadyShown.has(question)) {
+          questionsAlreadyShown.add(question);
+          uniqueQuestions.push(question);
+        }
+
+        if (uniqueQuestions.length >= 3) {
+          break;
+        }
+      }
+
+      const tags = await Tag.findAll({
+        order: [['name', 'ASC']],
+      });
+
+      return res.status(201).render('index.ejs', { uniqueQuestions, tags });
     } catch (error) {
       console.trace(error);
       res.status(500).send({ message: error.message });
