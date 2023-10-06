@@ -246,6 +246,10 @@ button:hover {
   opacity: 0.9;
 }
 
+.btn-container {
+  background-color: #f8f8f8;
+}
+
 /* Section catégories */
 
 .section-title {
