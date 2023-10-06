@@ -2,10 +2,6 @@
 
 <h2 class="page-title">Inscrivez-vous</h2>
 
-<% if (errorMessage) { %>
-<div class="error-message"><%= errorMessage %></div>
-<% } %>
-
 <form action="" method="POST" class="form form--signup">
   <div class="form-label-group">
     <input
@@ -51,6 +47,10 @@
     />
     <label for="passwordConfirm">Confirmez votre mot de passe</label>
   </div>
+
+  <% if (errorMessage) { %>
+  <div class="error-message"><%= errorMessage %></div>
+  <% } %>
 
   <button class="btn btn--signin" type="submit">S'enregistrer</button>
 </form>

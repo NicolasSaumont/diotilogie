@@ -51,7 +51,9 @@ const mainController = {
   async loginPage(req, res) {
     try {
       if (!res.locals.user) {
-        res.render('login.ejs');
+        const errorMessage = '';
+
+        return res.render('login.ejs', { errorMessage });
       } else {
         res.redirect('/');
       }
@@ -72,14 +74,21 @@ const mainController = {
         },
       });
 
+      if ((userEmail === '') | (userPassword == '')) {
+        const errorMessage = '*Merci de renseigner tous les champs';
+        return res.render('login.ejs', { errorMessage });
+      }
+
       if (!user) {
-        throw new Error('Utilisateur non trouvé');
+        const errorMessage = '*Utilisateur non trouvé';
+        return res.render('login.ejs', { errorMessage });
       }
 
       const passwordMatch = await bcrypt.compare(userPassword, user.password);
 
       if (!passwordMatch) {
-        throw new Error('Mot de passe incorrect');
+        const errorMessage = '*Mot de passe incorrect';
+        return res.render('login.ejs', { errorMessage });
       } else {
         req.session.userID = user.dataValues.id;
         req.session.userMail = user.dataValues.email;

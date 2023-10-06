@@ -25,6 +25,11 @@
     />
     <label for="password">Votre mot de passe</label>
   </div>
+
+  <% if (errorMessage) { %>
+  <div class="error-message"><%= errorMessage %></div>
+  <% } %>
+
   <button class="btn btn--login" type="submit">Se connecter</button>
   <p class="signup"><a href="/signup">Je n'ai pas encore de compte.</a></p>
 </form>
