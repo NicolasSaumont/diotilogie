@@ -17,7 +17,11 @@ router.post('/signup', mainController.postSignup);
 
 // Tags url
 router.get('/tags', tagController.getTags);
-router.get('/tags/:id', tagController.getQuestionsByTagId);
+router.get(
+  '/tags/:id',
+  tagController.getQuestionsByTagId,
+  tagController.getTags
+);
 
 // Questions url
 router.get('/questions', questionController.getQuestions);

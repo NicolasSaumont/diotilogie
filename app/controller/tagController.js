@@ -28,7 +28,11 @@ const tagController = {
           .json({ message: 'Tag not found. Please verify the provided id' });
       }
 
-      return res.status(201).render('tag.ejs', { tag });
+      const tags = await Tag.findAll({
+        order: [['name', 'ASC']],
+      });
+
+      return res.status(201).render('tag.ejs', { tag, tags });
     } catch (error) {
       console.trace(error);
       res.status(500).send({ message: error.message });
