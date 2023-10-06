@@ -426,6 +426,20 @@ button:hover {
   background-color: #f6c963;
 }
 
+.signup {
+  color: #223036;
+  margin-top: 1em;
+}
+
+.signup a {
+  text-decoration: underline;
+  color: #223036;
+}
+
+.signup a:hover {
+  text-decoration: none;
+}
+
 /* Pied de page */
 .site-footer {
   background-color: #223036;
