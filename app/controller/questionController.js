@@ -33,9 +33,13 @@ const questionController = {
 
       const texteAvecSautsDeLigne = question.description.replace(/\n/g, '<br>');
 
-      return res
-        .status(201)
-        .render('question.ejs', { question, texteAvecSautsDeLigne });
+      const errorMessage = '';
+
+      return res.status(201).render('question.ejs', {
+        question,
+        texteAvecSautsDeLigne,
+        errorMessage,
+      });
     } catch (error) {
       console.trace(error);
       res.status(500).send({ message: error.message });

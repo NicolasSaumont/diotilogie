@@ -28,13 +28,17 @@
         
         <h3 class="comments-title">Commentaires</h3>
         
-        <form action="POST" class="form form--comment">
+        <form action="" method="POST" class="form form--comment">
 
             <div class="form-label-group">
-                <input type="text" class="form-control" id="comment-description" name="comment-description"
+                <input type="text" class="form-control" id="comment-description" name="commentDescription"
                     placeholder="Votre commentaire">
                 <label for="comment-description">Votre commentaire</label>
             </div>
+
+            <% if (errorMessage) { %>
+                <div class="error-message"><%= errorMessage %></div>
+            <% } %>
 
             <button class="btn btn--signin" type="submit">Envoyer</button>
 

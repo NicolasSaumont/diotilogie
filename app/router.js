@@ -27,6 +27,6 @@ router.get('/question/:id', questionController.getQuestionById);
 router.get('/profil/:user', userController.profilUserPage);
 
 // Comments url
-router.post('/question', commentController.postComment);
+router.post('/question/:id', commentController.postComment);
 
 module.exports = router;
