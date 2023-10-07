@@ -3,7 +3,6 @@ const { Question } = require('../models');
 
 const CommentController = {
   async postComment(req, res) {
-    console.log(req.body);
     try {
       const questionId = req.params.id;
       const question = await Question.findByPk(questionId, {
@@ -23,11 +22,16 @@ const CommentController = {
         });
       }
 
-      console.log(req.body);
+      let comment = req.body.commentDescription;
 
-      const comment = req.body.commentDescription;
-
-      console.log(comment);
+      if (comment === '') {
+        const errorMessage = '*Vous ne pouvez pas poster un commentaire vide';
+        return res.render('question.ejs', {
+          errorMessage,
+          question,
+          texteAvecSautsDeLigne,
+        });
+      }
 
       const newComment = await Comment.create({
         description: comment,
@@ -35,8 +39,7 @@ const CommentController = {
         question_id: req.params.id,
       });
 
-      //   res.redirect('/question/:id', { question });
-      return res.render('question.ejs', { question, texteAvecSautsDeLigne });
+      return res.redirect(`/question/${req.params.id}`);
     } catch (error) {
       console.trace(error);
       res.status(500).send({ message: error.message });
