@@ -28,5 +28,6 @@ router.get('/profil/:user', userController.profilUserPage);
 
 // Comments url
 router.post('/question/:id', commentController.postComment);
+router.delete('/comments/:id', commentController.deleteComment);
 
 module.exports = router;

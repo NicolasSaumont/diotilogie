@@ -45,6 +45,34 @@ const CommentController = {
       res.status(500).send({ message: error.message });
     }
   },
+  async deleteComment(req, res) {
+    try {
+      const commentId = Number(req.params.id);
+
+      const comment = await Comment.findByPk(commentId);
+
+      if (!comment) {
+        return res
+          .status(404)
+          .json({ error: "Commentaire non trouvé. Merci de vérifier l'id." });
+      }
+
+      if (comment.user_id !== req.session.userID) {
+        return res.status(403).json({
+          message: "Vous n'êtes pas autorisé à supprimer ce commentaire",
+        });
+      }
+
+      await comment.destroy();
+
+      return res.sendStatus(204);
+    } catch (error) {
+      console.trace(error);
+      return res
+        .status(500)
+        .json({ error: 'Unexpected server error. Please try again later.' });
+    }
+  },
 };
 
 module.exports = CommentController;

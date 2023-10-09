@@ -135,7 +135,7 @@ Visitez https://diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://d
   - [x] Création
   - [x] Affichage
   - [ ] Modification
-  - [ ] Suppression
+  - [x] Suppression
 - [x] Déconnexion d'un utilisateur
 
 ### V2
