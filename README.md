@@ -1,5 +1,5 @@
-
 <a name="readme-top"></a>
+
 <!--
 *** Thanks for checking out the projetc 'Diotilogie'. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -8,23 +8,20 @@
 *** Thanks again! Now go have fun exploring this resume! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
 *** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. 
+*** for contributors-url, forks-url, etc.
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -48,8 +45,6 @@
     <a href="https://github.com/NicolasSaumont/diotilogie/pulls">Demande de fonctionnalité</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -77,9 +72,8 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## A propos
 
 [![Product Name Screen Shot][product-screenshot]](https://www.cv-adventure.nicolassaumont.com)
@@ -88,20 +82,16 @@ Que ce soit pour comprendre les mystères de la science, les curiosités de la n
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 ### Développé avec
 
-* [![Node][Node.js]][Node-url]
-* [![Express][Express.js]][Express-url]
-* [![EJS][EJS.js]][EJS-url]
-
+- [![Node][Node.js]][Node-url]
+- [![Express][Express.js]][Express-url]
+- [![EJS][EJS.js]][EJS-url]
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Commencer
 
 Visitez https://diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://diotilogie.nicolassaumont.com). Si vous voulez accéder au projet en local, veuillez suivre les étapes suivantes :
@@ -118,24 +108,13 @@ Visitez https://diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://d
 - Lancez l'application en utilisant la commande : `npm start`
 - Ouvrez un navigateur et aller sur `http://localhost:3000` pour accéder à l'application.
 
-
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
-
-
 
 <!-- ROADMAP -->
+
 ## Feuille de route
+
+### V1
 
 - [x] Création des datas
 - [x] User-stories
@@ -150,20 +129,28 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Inscription d'un utilisateur
 - [x] Connexion d'un utilisateur
 - [x] Rédaction d'un commentaire
-- [ ] Enregistrement d'un commentaire
+- [x] Enregistrement d'un commentaire
 - [x] Afficher la page de profil d'un utilisateur
-- [ ] Afficher les commentaires d'un utilisateur
+- [ ] CRUD comentaires utilisateurs
+  - [x] Création
+  - [x] Affichage
+  - [ ] Modification
+  - [ ] Suppression
 - [x] Déconnexion d'un utilisateur
 
-  
+### V2
+
+- [ ] Upgrade page de profil des utilisateurs
+  - [ ] Nombre de commentaires postés
+  - [ ] Modification du pseudo
+  - [ ] Modification ud mot de passe
 
 Voir les [problèmes non résolus](https://github.com/NicolasSaumont/diotilogie/issues) pour accéder à la liste complète des fonctionnalités proposées (et les bugs connus).
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Les contributions sont ce qui fait de la communauté open source un endroit extraordinaire pour apprendre, inspirer et créer. Toutes vos contributions sont **très appréciées**.
@@ -173,18 +160,16 @@ N'oubliez pas de donner une étoile au projet ! Merci à tous !
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distribué sous la licence MIT. Voir `LICENSE.txt` pour plus d'informations.
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Nicolas Saumont - [@NicolasSaumont](https://twitter.com/NicolasSaumont) - saumont.nicolas@gmail.com
@@ -193,21 +178,18 @@ Project Link: [https://github.com/NicolasSaumont/diotilogie](https://github.com/
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-
-* [Img Shield](https://shields.io/)
-* [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+- [Img Shield](https://shields.io/)
+- [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <p align="right">(<a href="#readme-top">Haut de la page</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/NicolasSaumont/diotilogie.svg?style=for-the-badge
 [contributors-url]: https://github.com/NicolasSaumont/diotilogie/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/NicolasSaumont/diotilogie.svg?style=for-the-badge

@@ -339,6 +339,14 @@ button:hover {
   font-style: italic;
 }
 
+.comment-article-title a {
+  color: #f6c963;
+}
+
+.comment-article-title a:hover {
+  color: #f8f8f8;
+}
+
 .page_description {
   margin-bottom: 2em;
 }
