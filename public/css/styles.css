@@ -577,6 +577,10 @@ button:hover {
   margin-left: 10px;
 }
 
+#cancelDelete:hover {
+  background-color: #f8f8f8;
+}
+
 .button.is-danger {
   background-color: #f8f8f8;
   color: #ff3860;
