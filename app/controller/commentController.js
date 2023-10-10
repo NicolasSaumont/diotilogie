@@ -45,6 +45,46 @@ const CommentController = {
       res.status(500).send({ message: error.message });
     }
   },
+  async updateComment(req, res) {
+    try {
+      const commentId = Number(req.params.id);
+
+      const foundComment = await Comment.findByPk(commentId);
+
+      // Gestion des erreurs
+      if (!foundComment) {
+        return res.status(404).json({
+          error: "Commentaire non trouvé. Merci de vérifier l'id renseigné.",
+        });
+      }
+
+      if (
+        typeof req.body.description !== 'undefined' &&
+        typeof req.body.description !== 'string'
+      ) {
+        return res.status(400).json({
+          error:
+            "Invalid body parameter 'description'. Should provide a string.",
+        });
+      }
+
+      // Préparation des données à mettre à jour avec les données reçues
+      const commentNewData = {};
+
+      if (req.body.description) {
+        commentNewData.description = req.body.description;
+      }
+
+      await foundComment.update(commentNewData);
+
+      return res.json(foundComment);
+    } catch (error) {
+      console.trace(error);
+      return res
+        .status(500)
+        .json({ error: 'Unexpected server error. Please try again later.' });
+    }
+  },
   async deleteComment(req, res) {
     try {
       const commentId = Number(req.params.id);

@@ -414,7 +414,8 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.form-label-group input {
+.form-label-group input,
+.modal-card-body input {
   height: 40px;
   padding: 10px;
   font-size: 16px;
@@ -437,7 +438,9 @@ button:hover {
 }
 
 .form-label-group input:focus,
-.form-label-group input:valid {
+.form-label-group input:valid,
+.modal-card-body input:focus,
+.modal-card-body input:valid {
   border-color: #223036;
   box-shadow: 0 0 8px rgba(49, 44, 44, 0.5);
 }
@@ -498,7 +501,8 @@ button:hover {
 
 /* Modale de suppression des commentaire */
 
-#deleteCommentModal {
+#deleteCommentModal,
+#updateCommentModal {
   display: none;
   position: fixed;
   top: 0;
@@ -509,17 +513,20 @@ button:hover {
   z-index: 1000;
 }
 
-#deleteCommentModal.is-active {
+#deleteCommentModal.is-active,
+#updateCommentModal.is-active {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#deleteCommentModal.is-active .modal-background {
+#deleteCommentModal.is-active .modal-background,
+#updateCommentModal.is-active .modal-background {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#deleteCommentModal.is-active .modal-card {
+#deleteCommentModal.is-active .modal-card,
+#updateCommentModal.is-active .modal-card {
   max-width: 400px;
   width: 100%;
   position: relative;
@@ -577,8 +584,18 @@ button:hover {
   margin-left: 10px;
 }
 
-#cancelDelete:hover {
+.cancel:hover {
   background-color: #f8f8f8;
+}
+
+.button.is-warning {
+  background-color: #f8f8f8;
+  color: #223036;
+  border: 2px solid #f6c963;
+}
+
+.button.is-warning:hover {
+  background-color: #f6c963;
 }
 
 .button.is-danger {

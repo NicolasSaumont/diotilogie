@@ -32,8 +32,7 @@
 
             <div class="form-label-group">
                 <input type="text" class="form-control" id="comment-description" name="commentDescription"
-                    placeholder="Votre commentaire">
-                <label for="comment-description">Votre commentaire</label>
+                    placeholder="Votre commentaire" aria-label="Votre commentaire">
             </div>
 
             <% if (errorMessage) { %>
@@ -45,15 +44,15 @@
         </form>
 
         <% question.commentsFromQuestion.forEach(comment => { %>
-            <div id="comment-<%= comment.id %>" class="comment">
+            <div id="comment-<%= comment.id %>" class="comment" data-id="<%= comment.id %>">
                 <% if (userID === comment.userOfComment.id) {%>
                     <div class="comment-icons">
-                        <img class="comment-icon comment-icon--edit" src="/img/icons/edit.png" alt="comment edit icon" title="Editez votre commentaire" data-id="<%= comment.id %>">
+                        <img class="comment-icon comment-icon--update" src="/img/icons/edit.png" alt="comment update icon" title="Modifiez votre commentaire" data-id="<%= comment.id %>">
                         <img class="comment-icon comment-icon--delete" src="/img/icons/trash.png" alt="comment delete icon" title="Supprimez votre commentaire" data-id="<%= comment.id %>">
                     </div>
                 <% } %>
                 <p class="comment-author-date">Commentaire posté par <strong><%= comment.userOfComment.username %></strong> le <%= comment.created_at.toLocaleDateString("fr") %></p>
-                <p class="comment-description"><%= comment.description %></p>
+                <p class="comment-description" slot="comment-description"><%= comment.description %></p>
             </div>
         <% }) %>
 
@@ -77,17 +76,35 @@
         <div class="modal-card">
             <header class="modal-card-head">
             <p class="modal-card-title">Confirmation de suppression</p>
-            <button class="delete" aria-label="close" id="closeModal"><p class="cross">+</p></button>
+            <button class="delete closeModal" aria-label="close"><p class="cross">+</p></button>
             </header>
             <section class="modal-card-body">
             <p>Êtes-vous sûr de vouloir supprimer ce commentaire ? Cette action est irréversible</p>
             </section>
             <footer class="modal-card-foot">
             <button class="button is-danger" id="confirmDelete">Supprimer</button>
-            <button class="button" id="cancelDelete">Annuler</button>
+            <button class="button cancel" id="cancelDelete">Annuler</button>
             </footer>
         </div>
     </div>
+
+    <form id="updateCommentModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+            <p class="modal-card-title">Modification de votre commentaire</p>
+            <button class="delete closeModal" aria-label="close"><p class="cross">+</p></button>
+            </header>
+            <section class="modal-card-body">
+                <input type="text" class="form-control"             id="comment-description" name="description"
+                    placeholder="Votre commentaire" aria-label="Votre commentaire">
+            </section>
+            <footer class="modal-card-foot">
+            <button class="button is-warning" id="confirmUpdate">Modifier</button>
+            <button class="button cancel" id="cancelUpdate">Annuler</button>
+            </footer>
+        </div>
+    </form>
 
 
     <script src="/js/comment.js"></script>

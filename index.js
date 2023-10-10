@@ -27,6 +27,7 @@ app.set('views', './app/views');
 app.use(express.static(path.join(__dirname, './public')));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ extended: true }));
 
 app.use((req, res, next) => {
   res.locals.userID = req.session.userID;
