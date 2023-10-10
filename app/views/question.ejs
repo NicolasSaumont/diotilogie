@@ -45,14 +45,14 @@
 
         <% question.commentsFromQuestion.forEach(comment => { %>
             <div id="comment-<%= comment.id %>" class="comment" data-id="<%= comment.id %>">
+                <p class="comment-author-date">Commentaire posté par <strong><%= comment.userOfComment.username %></strong> le <%= comment.created_at.toLocaleDateString("fr") %></p>
+                <p class="comment-description" slot="comment-description"><%= comment.description %></p>
                 <% if (userID === comment.userOfComment.id) {%>
                     <div class="comment-icons">
                         <img class="comment-icon comment-icon--update" src="/img/icons/edit.png" alt="comment update icon" title="Modifiez votre commentaire" data-id="<%= comment.id %>">
                         <img class="comment-icon comment-icon--delete" src="/img/icons/trash.png" alt="comment delete icon" title="Supprimez votre commentaire" data-id="<%= comment.id %>">
                     </div>
                 <% } %>
-                <p class="comment-author-date">Commentaire posté par <strong><%= comment.userOfComment.username %></strong> le <%= comment.created_at.toLocaleDateString("fr") %></p>
-                <p class="comment-description" slot="comment-description"><%= comment.description %></p>
             </div>
         <% }) %>
 

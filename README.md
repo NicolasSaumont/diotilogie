@@ -131,19 +131,26 @@ Visitez https://diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://d
 - [x] Rédaction d'un commentaire
 - [x] Enregistrement d'un commentaire
 - [x] Afficher la page de profil d'un utilisateur
-- [ ] CRUD comentaires utilisateurs
+- [x] CRUD commentaires utilisateurs
   - [x] Création
   - [x] Affichage
-  - [ ] Modification
+  - [x] Modification
   - [x] Suppression
 - [x] Déconnexion d'un utilisateur
 
 ### V2
 
+- [ ] CRUD questions pour les utilisateurs
+  - [ ] Création
+  - [ ] Affichage
+  - [ ] Modification
+  - [ ] Suppression
 - [ ] Upgrade page de profil des utilisateurs
   - [ ] Nombre de commentaires postés
   - [ ] Modification du pseudo
   - [ ] Modification ud mot de passe
+  - [ ] Nombre de questions postées
+  - [ ] Liste des questions postées
 
 Voir les [problèmes non résolus](https://github.com/NicolasSaumont/diotilogie/issues) pour accéder à la liste complète des fonctionnalités proposées (et les bugs connus).
 

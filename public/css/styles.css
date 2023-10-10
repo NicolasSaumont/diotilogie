@@ -620,11 +620,40 @@ button:hover {
     border-radius: 0.2em;
   }
 
+  .main-menu_item {
+    margin-right: 0;
+  }
+
+  .main-menu__text {
+    width: 80px;
+    font-size: 0.8rem;
+  }
+
   .page-title {
     font-size: 2rem;
   }
 
   .main__banner--up {
     transform: translateY(40%);
+  }
+
+  .card_title {
+    opacity: 1;
+  }
+
+  .tag-text {
+    opacity: 1;
+  }
+
+  .comment-icons {
+    position: relative;
+    left: 100%;
+    transform: translateX(-20%);
+    opacity: 1;
+  }
+
+  #deleteCommentModal,
+  #updateCommentModal {
+    width: 100vw;
   }
 }
