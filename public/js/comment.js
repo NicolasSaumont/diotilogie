@@ -72,9 +72,9 @@ async function updateComment(commentId, formObject) {
 
   try {
     const response = await fetch(`/comments/${commentId}`, {
-      method: 'PATCH',
+      method: 'PUT',
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        'Content-type': 'application/json; charset=utf-8',
       },
       body: bodyJSON,
     });

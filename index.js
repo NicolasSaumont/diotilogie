@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const router = require('./app/router');
 const session = require('express-session');
+const cors = require('cors');
 
 const port = process.env.PORT || 3000;
 
@@ -35,6 +36,14 @@ app.use((req, res, next) => {
   res.locals.username = req.session.username;
   next();
 });
+
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions));
 
 app.use(router);
 
