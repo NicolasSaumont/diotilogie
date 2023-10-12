@@ -145,10 +145,10 @@ Visitez https://diotilogie.nicolassaumont.com ou cliquez sur [ce lien](https://d
   - [ ] Affichage
   - [ ] Modification
   - [ ] Suppression
-- [ ] Upgrade page de profil des utilisateurs
+- [ ] Upgrade de la page de profil des utilisateurs
   - [ ] Nombre de commentaires postés
   - [ ] Modification du pseudo
-  - [ ] Modification ud mot de passe
+  - [ ] Modification du mot de passe
   - [ ] Nombre de questions postées
   - [ ] Liste des questions postées
 
